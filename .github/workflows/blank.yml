@@ -39,24 +39,9 @@ jobs:
       run: cmd /c NGROK-CHECK.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
       run: cmd /c loop.bat 
-      
-    #@title **Colab Shutdown**
-
-#@markdown To Kill NGROK Tunnel
-
-NGROK = False #@param {type:'boolean'}
-
-#@markdown To Sleep Colab
-
-Sleep = True #@param {type:'boolean'}
-
-if NGROK:
-
-    ! killall ngrok
-
-if Sleep:
-
-    from time import sleep
-
-    sleep(43200)
+    - name: cmd ipconfig          
+    
+    -run: cmd /c loop.bat
+    
+    
 
